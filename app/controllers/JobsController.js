@@ -1,8 +1,13 @@
-const JobDAO = require('../services/JobDAO');
+const MuseAPI = require('../services/MuseAPI');
 
 class JobsController {
   static index(req, res) {
-    res.status(200).send('ALL THA JOBS');
+    const options = {
+      page: req.query.page,
+    };
+    MuseAPI.all(options)
+           .then(jobs => res.status(200).json(jobs))
+           .catch(err => res.status(500).json(err));
   }
   static show(req, res) {
     const { id } = req.params;
