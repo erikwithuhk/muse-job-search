@@ -21,7 +21,7 @@ if (process.env.ENV === 'dev') {
     },
   });
   app.use(middleware);
-  app.use(webpackHotMiddleware);
+  app.use(webpackHotMiddleware(compiler));
 }
 
 app.use(express.static(path.join(__dirname, '/dist')));
