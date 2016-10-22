@@ -1,3 +1,76 @@
-body {
-  background-color: crimson;
+/*=======================
+-- TABLE OF CONTENTS --
+
+1. Colors
+2. Reset Styles
+3. Global Styles
+4. Top Nav
+#. Media Queries
+
+=======================*/
+
+
+
+/*=======================
+1. Colors
+
+Black       #333
+Gray        #eee
+LightBlue   #b3e7f5
+Blue        #53b6d0
+
+=======================*/
+
+
+
+/*=======================
+2. Reset Styles
+=======================*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+html,
+body {
+  height: 100%;
+}
+
+
+
+/*=======================
+3. Global Styles
+=======================*/
+
+body {
+  font: normal 16px 'Montserrat',sans-serif;
+}
+
+
+
+/*=======================
+4. Top Nav
+=======================*/
+
+.top-nav {
+  background-color: #333;
+  padding: 1rem;
+}
+
+.brand {
+  color: #53b6d0;
+  text-decoration: none;
+}
+
+.brand span {
+  color: #fff;
+  font-weight: bold;
+}
+
+
+
+/*=======================
+#. Media Queries
+=======================*/
