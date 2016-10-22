@@ -12,7 +12,7 @@ class MuseAPI {
   static all(queries) {
     const queryString = MuseAPI.createQueryString(queries);
     return request.get(`${baseURL}${queryString}`)
-                  .then(response => response.body.results)
+                  .then(response => response.body)
                   .catch(err => err);
   }
 }

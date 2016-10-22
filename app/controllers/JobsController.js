@@ -1,8 +1,8 @@
-const MuseAPI = require('../services/MuseAPI');
+const Job = require('../models/Job');
 
 class JobsController {
   static index(req, res) {
-    MuseAPI.all(req.query)
+    Job.all(req.query)
            .then(jobs => res.status(200).json(jobs))
            .catch(err => res.status(500).json(err));
   }

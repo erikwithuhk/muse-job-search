@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Icon } from 'react-fa';
+// import { Icon } from 'react-fa';
 
 const propTypes = {
 
 };
 
 class Job extends Component {
+  // const date = newDate();
   render() {
     return (
       <li className="job-list-item">
@@ -13,7 +14,6 @@ class Job extends Component {
         <h4 className="company">Company</h4>
         <p className="location">Location</p>
         <p className="date-posted">Posted 1 day ago</p>
-        <Icon spin name="spinner" />
       </li>
     );
   }
