@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 
+const propTypes = {
+  children: React.PropTypes.element,
+};
+
 class App extends Component {
   render() {
     return (
-      <h1>App</h1>
+      <main>
+        {this.props.children}
+      </main>
     );
   }
 }
+
+App.propTypes = propTypes;
 
 export default App;
