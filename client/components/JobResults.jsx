@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Job from './Job.jsx';
 
 const propTypes = {
 
@@ -7,7 +8,9 @@ const propTypes = {
 class JobResults extends Component {
   render() {
     return (
-      <h1>Job Results</h1>
+      <ul className="job-result-list">
+        <Job />
+      </ul>
     );
   }
 }
