@@ -34,7 +34,9 @@ Blue        #53b6d0
 }
 
 html,
-body {
+body,
+.root,
+main {
   height: 100%;
 }
 
@@ -86,7 +88,10 @@ button {
 
 .job-list {
   background-color: #eee;
+  /* 100% - header height */
+  min-height: calc(100% - 3.1875rem);
   list-style-type: none;
+  position: relative;
 }
 
 .job-list-item {
@@ -126,7 +131,14 @@ button {
 }
 
 .loading-spinner {
-
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 4.1875rem);
+  position: absolute;
+  width: 100%;
 }
 
 .load-more-button {

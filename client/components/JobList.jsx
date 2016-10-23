@@ -31,7 +31,7 @@ class JobList extends Component {
     } else if (this.state.jobs[0] === 'Loading') {
       return (
         <div className="loading-spinner">
-          <Icon spin name="spinner" />
+          <Icon spin name="spinner" size="5x" />
         </div>
       );
     }
