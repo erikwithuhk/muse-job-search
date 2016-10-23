@@ -5,7 +5,8 @@ const TopNav = () => (
   <header>
     <nav className="top-nav">
       <Link to="/" className="brand">
-        <span>the</span>jester
+        <strong>the</strong><span className="blue-text">jester</span><br />
+        <span className="small-text">jobs</span>
       </Link>
     </nav>
   </header>

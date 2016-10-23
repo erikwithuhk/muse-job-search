@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import request from 'superagent';
 import { Icon } from 'react-fa';
 import Job from './Job.jsx';
+import FilterBar from './filter/FilterBar.jsx';
 
 const propTypes = {
 
@@ -61,6 +62,7 @@ class JobList extends Component {
     return (
       <ul className="job-list">
         <h2 className="job-list-header">23,344 jobs found</h2>
+        <FilterBar />
         {results}
         {loadMoreButton}
       </ul>
