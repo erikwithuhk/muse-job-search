@@ -14,10 +14,10 @@ class Job {
   }
   constructor({ id, name, company, locations, publication_date }) {
     this.id = id;
-    this.name = name;
+    this.title = name;
     this.company = company.name;
     this.locations = Job.getLocations(locations);
-    this.publicationDate = publication_date;
+    this.postedDate = Date.parse(publication_date);
   }
 }
 

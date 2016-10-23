@@ -1,12 +1,12 @@
 import React from 'react';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from '../components/App.jsx';
-import JobResults from '../components/JobResults.jsx';
+import JobList from '../components/JobList.jsx';
 
 const Routes = () => (
   <Router history={hashHistory} >
     <Route path="/" component={App} >
-      <IndexRoute component={JobResults} />
+      <IndexRoute component={JobList} />
     </Route>
   </Router>
 );

@@ -38,6 +38,10 @@ body {
   height: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1rem;
+}
+
 
 
 /*=======================
@@ -46,6 +50,11 @@ body {
 
 body {
   font: normal 16px 'Montserrat',sans-serif;
+}
+
+button {
+  -webkit-apperance: none;
+  font: inherit;
 }
 
 
@@ -68,6 +77,70 @@ body {
   color: #fff;
   font-weight: bold;
 }
+
+
+
+/*=======================
+5. Job List
+=======================*/
+
+.job-list {
+  background-color: #eee;
+  list-style-type: none;
+}
+
+.job-list-item {
+  font-size: 0.875rem;
+}
+
+.job-list-header {
+  background-color: #fff;
+  padding: 1.5rem 1rem;
+}
+
+.job-list-item a {
+  background-color: #fff;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  display: block;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.job-list-item a * {
+  margin: 0.5rem 0;
+}
+
+.job-list-item .company {
+  color: #ccc;
+  font-weight: normal;
+}
+
+.job-list-item .title {
+  color: #53b6d0;
+}
+
+.job-list-item .date-posted {
+  color: #333;
+}
+
+.loading-spinner {
+
+}
+
+.load-more-button {
+  -webkit-appearance: none;
+  background-color: #53b6d0;
+  border: none;
+  color: #fff;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 1rem;
+  width: 100%;
+}
+
+
 
 
 
