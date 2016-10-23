@@ -39,10 +39,12 @@ class JobList extends Component {
     return this.state.jobs.map(job => (
       <Job
         key={job.id}
+        id={job.id}
         title={job.title}
         company={job.company}
         location={job.location}
         postedDate={parseInt(job.postedDate, 10)}
+        shortName={job.shortName}
       />
     ));
   }

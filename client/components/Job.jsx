@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 const propTypes = {
+  id: React.PropTypes.number,
   title: React.PropTypes.string,
   company: React.PropTypes.string,
   location: React.PropTypes.string,
   postedDate: React.PropTypes.number,
+  shortName: React.PropTypes.string,
 };
 
 class Job extends Component {
@@ -47,7 +49,7 @@ class Job extends Component {
     const daysAgoText = this.setDaysAgoText();
     return (
       <li className="job-list-item">
-        <Link to="/">
+        <Link to={`/jobs/${this.props.id}/${this.props.shortName}`}>
           <h4 className="company">{this.props.company}</h4>
           <h3 className="title">{this.props.title}</h3>
           <p className="location">{this.props.location}</p>
