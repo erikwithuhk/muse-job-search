@@ -6,7 +6,6 @@ const TopNav = () => (
     <nav className="top-nav">
       <Link to="/" className="brand">
         <strong>the</strong><span className="blue-text">jester</span><br />
-        <span className="small-text">jobs</span>
       </Link>
     </nav>
   </header>

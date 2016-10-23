@@ -65,11 +65,6 @@ button {
   color: #53b6d0;
 }
 
-.small-text {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-}
-
 
 
 /*=======================
@@ -107,6 +102,14 @@ button {
 .job-list-header {
   background-color: #fff;
   padding: 1.5rem 1rem;
+}
+
+.page-title {
+  font-size: 1.25rem;
+}
+
+.results-count {
+  font-weight: normal;
 }
 
 .job-list-item a {

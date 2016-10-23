@@ -61,7 +61,10 @@ class JobList extends Component {
     }
     return (
       <ul className="job-list">
-        <h2 className="job-list-header">23,344 jobs found</h2>
+        <div className="job-list-header">
+          <h2 className="page-title">Browse Jobs</h2>
+          <h3 className="results-count">23,344 jobs found</h3>
+        </div>
         <FilterBar />
         {results}
         {loadMoreButton}
