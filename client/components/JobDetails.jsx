@@ -21,12 +21,20 @@ class JobDetails extends Component {
            .then(response => this.setState({ job: response.body }))
            .catch(err => err);
   }
+  fillJobDescription() {
+    const jobDescriptionNode = document.querySelector('.job-description');
+    if (jobDescriptionNode) {
+      jobDescriptionNode.innerHTML = this.state.job.description;
+    }
+  }
   render() {
+    this.fillJobDescription();
     return (
-      <div>
+      <div className="job-details-container">
         <Link to="/" >Back to Browse Jobs</Link>
-        <p>{this.state.job.title}</p>
+        <h2>{this.state.job.title}</h2>
         <p>{this.state.job.company}</p>
+        <div className="job-description" />
       </div>
     );
   }

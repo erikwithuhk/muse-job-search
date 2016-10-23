@@ -7,6 +7,7 @@
 4. Top Nav
 5. Job List
 6. Filter Bar
+7. Job Details
 #. Media Queries
 
 =======================*/
@@ -174,6 +175,24 @@ button {
   text-align: center;
 }
 
+
+
+/*=======================
+7. Job Details
+=======================*/
+
+.job-details-container {
+  font-size: 0.875rem;
+  padding: 1rem;
+}
+
+.job-details-container p {
+  margin-top: 1em;
+}
+
+.job-details-container ul li {
+  margin: 0.5rem 2rem;
+}
 
 
 /*=======================
