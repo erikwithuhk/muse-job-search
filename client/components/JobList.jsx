@@ -24,7 +24,7 @@ class JobList extends Component {
     this.setState({ jobs: ['Loading'] });
     request.get(`/api/v1/jobs?page=${this.state.page}`)
            .then(response => this.setState({ jobs: response.body }))
-           .catch(err => console.error(err));
+           .catch(err => err);
   }
   createJobElements() {
     if (this.state.jobs.length === 0) {
