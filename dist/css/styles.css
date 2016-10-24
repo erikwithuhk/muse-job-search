@@ -58,10 +58,14 @@ body {
 }
 
 button,
-input[type=submit] {
-  -webkit-apperance: none;
-  cursor: pointer;
+input {
+  -webkit-appearance: none;
   font: inherit;
+}
+
+button,
+input[type=submit] {
+  cursor: pointer;
 }
 
 .bottom-button {
@@ -213,6 +217,12 @@ input[type=submit] {
 
 .checkbox-container {
   display: inline-block;
+  width: 100%;
+}
+
+.filter-form input[type=text] {
+  border: 2px solid #ccc;
+  padding: 0.25rem 0.5rem;
   width: 100%;
 }
 

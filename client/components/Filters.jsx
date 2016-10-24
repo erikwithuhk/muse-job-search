@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { hashHistory, withRouter } from 'react-router';
 import FilterCheckboxes from './filters/FilterCheckboxes.jsx';
+import locations from '../lib/locations.js';
 
 const propTypes = {
   setFilters: React.PropTypes.func,
@@ -48,6 +49,11 @@ class Filters extends Component {
       'Sales',
       'Social Media & Community',
     ];
+    const locationsDatalist = (
+      <datalist id="locations">
+        {locations.map((location, idx) => (<option key={idx} value={location} />))}
+      </datalist>
+    );
     return (
       <div className="filter-container">
         <h2 className="page-title">Filter Jobs</h2>
@@ -55,7 +61,10 @@ class Filters extends Component {
           <div className="filter-form-container">
             <h3 className="filter-subhead">By category:</h3>
             <FilterCheckboxes items={categories} type="category" />
+            <h3 className="filter-subhead">By location:</h3>
+            <input type="text" list="locations" />
           </div>
+          {locationsDatalist}
           <input
             className="bottom-button bottom-button--fixed"
             type="submit"
