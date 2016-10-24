@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
-import { Icon } from 'react-fa';
+import { hashHistory, withRouter } from 'react-router';
+import CompanyFilter from './filters/CompanyFilter.jsx';
 
 class Filters extends Component {
+  constructor(props) {
+    super(props);
+    this.applyFilters = this.applyFilters.bind(this);
+  }
+  applyFilters() {
+    hashHistory.push('/');
+  }
   render() {
     return (
-      <div className="filter-bar">
-        {/* <form className="filter-form">
-          <h3>Category</h3>
-
-        </form> */}
+      <div className="filter-container">
+        <CompanyFilter />
+        <button className="bottom-button" onClick={this.applyFilters}>
+          Apply Filters
+        </button>
       </div>
     );
   }
 }
 
-export default Filters;
+export default withRouter(Filters);

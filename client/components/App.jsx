@@ -32,6 +32,9 @@ class App extends Component {
     this.setState({ page: nextPage });
     this.getJobs();
   }
+  applyFilters() {
+    
+  }
   render() {
     const childrenWithProps = React.cloneElement(this.props.children, {
       jobs: this.state.jobs,
