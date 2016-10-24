@@ -6,10 +6,10 @@ class FilterBar extends Component {
     return (
       <div className="filter-bar">
         <h2 className="filter-bar_header"><Icon name="filter" /> Filter</h2>
-        <form className="filter-form">
+        {/* <form className="filter-form">
           <h3>Category</h3>
 
-        </form>
+        </form> */}
       </div>
     );
   }

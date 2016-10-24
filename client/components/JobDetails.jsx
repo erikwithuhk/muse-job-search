@@ -33,14 +33,16 @@ class JobDetails extends Component {
       <div className="job-details-container">
         <Link to="/" className="back-link" >Back to Browse Jobs</Link>
         <div className="job-details-header">
-          <p className="company">{this.state.job.company}</p>
+          <h4 className="company">{this.state.job.company}</h4>
           <a className="title" href={this.state.job.museLink}>{this.state.job.title}</a>
           <p className="location secondary">{this.state.job.locations}</p>
           <p className="level secondary">{this.state.job.levels}</p>
           <p className="category secondary">{this.state.job.category}</p>
         </div>
         <div className="job-description" />
-        <a className="apply-button" href={this.state.job.museLink}>Read More and Apply</a>
+        <a className="bottom-button apply-button" href={this.state.job.museLink}>
+          Read More and Apply
+        </a>
       </div>
     );
   }

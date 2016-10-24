@@ -53,7 +53,7 @@ class Job extends Component {
           <h4 className="company">{this.props.company}</h4>
           <h3 className="title">{this.props.title}</h3>
           <p className="location">{this.props.location}</p>
-          <p className="date-posted">Posted {daysAgoText}</p>
+          <p className="date-posted secondary">Posted {daysAgoText}</p>
         </Link>
       </li>
     );

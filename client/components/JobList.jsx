@@ -58,7 +58,9 @@ class JobList extends Component {
     let loadMoreButton;
     if (this.state.jobs.length > 1) {
       loadMoreButton = (
-        <button className="load-more-button" onClick={this.loadNextPage}>More jobs</button>
+        <button className="bottom-button load-more-button" onClick={this.loadNextPage}>
+          More jobs
+        </button>
       );
     }
     return (
