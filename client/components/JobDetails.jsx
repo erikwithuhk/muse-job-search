@@ -40,6 +40,7 @@ class JobDetails extends Component {
           <p className="category secondary">{this.state.job.category}</p>
         </div>
         <div className="job-description" />
+        <a className="apply-button" href={this.state.job.museLink}>Read More and Apply</a>
       </div>
     );
   }

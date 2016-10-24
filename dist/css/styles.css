@@ -194,7 +194,9 @@ button {
 }
 
 .job-details-header {
-  padding: 1.5rem 1rem;
+  border-bottom: 2px solid #eee;
+  margin: 1.5rem 1rem;
+  padding-bottom: 1rem;
 }
 
 .job-details-container .company {
@@ -225,6 +227,13 @@ button {
 
 .job-description ul li {
   margin: 0.5rem 2rem;
+}
+
+.apply-button {
+  background-color: #53b6d0;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
 }
 
 
