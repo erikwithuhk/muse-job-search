@@ -43,15 +43,17 @@ class JobList extends Component {
       );
     }
     return (
-      <ul className="job-list">
+      <div className="job-list-container">
         <div className="job-list-header">
           <h2 className="page-title">Browse Jobs</h2>
           <h3 className="results-count">{this.props.totalResults} jobs found</h3>
+          <Link to="/filter" className="filter-link"><Icon name="sliders" /> Filter</Link>
         </div>
-        <Link to="/filter" className="filter-link"><Icon name="sliders" /> Filter</Link>
-        {results}
-        {loadMoreButton}
-      </ul>
+        <ul className="job-list">
+          {results}
+          {loadMoreButton}
+        </ul>
+      </div>
     );
   }
 }

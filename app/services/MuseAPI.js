@@ -11,7 +11,6 @@ class MuseAPI {
   }
   static all(queries) {
     const queryString = MuseAPI.createQueryString(queries);
-    console.log(`${baseURL}?api_key=${apiKey}${queryString}`);
     return request.get(`${baseURL}?api_key=${apiKey}${queryString}`)
                   .then(response => response.body)
                   .catch(err => err);

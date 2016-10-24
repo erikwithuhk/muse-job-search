@@ -25,7 +25,7 @@ class JobDetails extends Component {
   fillJobDescription() {
     const jobDescriptionNode = document.querySelector('.job-description');
     if (jobDescriptionNode) {
-      jobDescriptionNode.innerHTML = this.state.job.description;
+      jobDescriptionNode.innerHTML = this.state.job.description || '';
     }
   }
   render() {
@@ -73,22 +73,24 @@ class JobDetails extends Component {
         <Link to="/" className="back-link" ><Icon name="chevron-left" className="back-arrow" />
           Back to Browse Jobs
         </Link>
-        <div className="job-details-header">
-          <h4 className="company">{this.state.job.company}</h4>
-          {titleNode}
-          {locationNode}
-          {levelNode}
-          {categoryNode}
+        <div className="job-details-body">
+          <div className="job-details-header">
+            <h4 className="company">{this.state.job.company}</h4>
+            {titleNode}
+            {locationNode}
+            {levelNode}
+            {categoryNode}
+          </div>
+          <div className="job-description" />
+          <a
+            className="bottom-button bottom-button--fixed apply-button"
+            href={this.state.job.museLink}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Read More and Apply <Icon name="external-link" className="external-link" />
+          </a>
         </div>
-        <div className="job-description" />
-        <a
-          className="bottom-button bottom-button--fixed apply-button"
-          href={this.state.job.museLink}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Read More and Apply <Icon name="external-link" className="external-link" />
-        </a>
       </div>
     );
   }

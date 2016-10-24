@@ -43,6 +43,10 @@ main {
   height: 100%;
 }
 
+main {
+  min-height: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-size: 1em;
 }
@@ -55,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font: normal 16px 'Montserrat',sans-serif;
+  background-color: #eee;
 }
 
 button,
@@ -120,6 +125,12 @@ input[type=submit] {
   text-decoration: none;
 }
 
+.job-list,
+.filter-container {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
 
 
 /*=======================
@@ -142,28 +153,28 @@ input[type=submit] {
 5. Job List
 =======================*/
 
-.job-list {
-  background-color: #eee;
-  min-height: calc(100% - 3.1875rem);
-  list-style-type: none;
-  position: relative;
-}
-
-.job-list-item {
-  font-size: 0.875rem;
+.job-list-container {
+  height: calc(100% - 3.1875rem);
 }
 
 .job-list-header {
   background-color: #fff;
-  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.job-list-header * {
+  margin: 0 auto;
+  max-width: 960px;
 }
 
 .page-title {
   font-size: 1.25rem;
+  padding: 1.5rem 1rem 0;
 }
 
 .results-count {
   font-weight: normal;
+  padding: 0 1rem 1.5rem;
 }
 
 .filter-link {
@@ -173,6 +184,19 @@ input[type=submit] {
   padding: 0.5rem 0;
   text-align: center;
   text-decoration: none;
+}
+
+
+.job-list {
+  background-color: #eee;
+  min-height: calc(100% - 7.875rem);
+  list-style-type: none;
+  margin: 0 auto;
+  position: relative;
+}
+
+.job-list-item {
+  font-size: 0.875rem;
 }
 
 .job-list-item a {
@@ -191,7 +215,7 @@ input[type=submit] {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: calc(100% - 7.875rem);
+  height: 100%;
   position: absolute;
   width: 100%;
 }
@@ -202,8 +226,12 @@ input[type=submit] {
 6. Filters
 =======================*/
 
+.filter-container {
+  background-color: #fff;
+}
+
 .filter-container .page-title {
-  margin: 1rem;
+  padding: 1rem;
 }
 
 .filter-subhead {
@@ -221,7 +249,7 @@ input[type=submit] {
 }
 
 .filter-form input[type=text] {
-  border: 2px solid #ccc;
+  border: 2px solid #53b6d0;
   padding: 0.25rem 0.5rem;
   width: 100%;
 }
@@ -232,9 +260,7 @@ input[type=submit] {
   margin-right: 0.5em;
 }
 
-.filter-form input[type=checkbox] + label,
-.filter-form input[type=checkbox] + label:active,
-.filter-form input[type=checkbox] + label:focus {
+.filter-form input[type=checkbox] + label {
   border: 2px solid #53b6d0;
   color: #53b6d0;
   cursor: pointer;
@@ -270,13 +296,18 @@ input[type=submit] {
 
 .job-details-container {
   font-size: 0.875rem;
+}
+
+.job-details-body {
+  background-color: #fff;
+  margin: 0 auto;
   padding-bottom: 4.5rem;
+  max-width: 960px;
 }
 
 .job-details-header {
   border-bottom: 2px solid #eee;
-  margin: 1.5rem 1rem;
-  padding-bottom: 1rem;
+  padding: 1.5rem 1rem;
 }
 
 .job-details-container .title .external-link {
@@ -303,3 +334,94 @@ input[type=submit] {
 /*=======================
 #. Media Queries
 =======================*/
+
+@media (min-width: 960px) {
+  .job-list-header {
+    border-bottom: 2px solid #ccc;
+  }
+
+  .job-list-item a {
+    border-left: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+  }
+
+  .job-list,
+  .filter-container {
+    padding-bottom: 2rem;
+  }
+
+  .filter-link {
+    background-color: #fff;
+    border: 2px solid #53b6d0;
+    color: #53b6d0;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-link:hover {
+    background-color: #53b6d0;
+    color: #fff;
+  }
+
+  .job-list {
+    padding: 1.5rem 0;
+  }
+
+  .filter-container {
+    border: 2px solid #ccc;
+    margin: 1.5rem auto;
+  }
+
+  .filter-container .page-title {
+    padding: 2.5rem 2.5rem 0;
+  }
+
+  .filter-form-container {
+    margin: 2.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .bottom-button {
+    margin: 2rem auto;
+    width: 50%;
+  }
+
+  .bottom-button--fixed {
+    position: relative;
+  }
+
+  .checkbox-container {
+    width: auto;
+  }
+
+  .filter-form input[type=checkbox] + label {
+    display: inline-block;
+    margin: 0.25em 0.25em 0.25em 0;
+    padding: 0.25em 0.5em;
+    width: auto;
+  }
+
+  .job-details-body {
+    border: 2px solid #ccc;
+    margin-top: 2rem;
+  }
+
+  .job-details-header {
+    margin: 2.5rem 2.5rem;
+    padding: 1.5rem 0;
+  }
+
+  .job-description {
+    padding: 0 2.5rem 2rem;
+  }
+
+  .job-details-container {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .job-details-body {
+    padding-bottom: 2rem;
+  }
+}

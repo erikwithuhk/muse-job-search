@@ -47,6 +47,8 @@ class Filters extends Component {
           <div className="filter-form-container">
             <h3 className="filter-subhead">By location:</h3>
             <input type="text" name="location" list="locations" />
+            <h3 className="filter-subhead">By company:</h3>
+            <input type="text" name="company" />
             <h3 className="filter-subhead">By level:</h3>
             <FilterCheckboxes items={levels} type="level" />
             <h3 className="filter-subhead">By category:</h3>
