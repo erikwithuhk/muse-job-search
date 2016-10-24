@@ -1,5 +1,5 @@
 # The Muse Job Search
-https://muse-job-search.herokuapp.com
+http://muse-job-search.erik-jonsson.com
 
 This app uses the Muse Jobs API endpoint to allow a user to view jobs and filter results by company, location, level, or category.
 
