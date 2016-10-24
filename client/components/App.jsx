@@ -10,6 +10,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      filters: {},
       jobs: ['Loading'],
       page: 1,
       totalResults: 0,
@@ -33,7 +34,7 @@ class App extends Component {
     this.getJobs();
   }
   applyFilters() {
-    
+
   }
   render() {
     const childrenWithProps = React.cloneElement(this.props.children, {

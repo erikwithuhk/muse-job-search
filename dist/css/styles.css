@@ -57,7 +57,8 @@ body {
   font: normal 16px 'Montserrat',sans-serif;
 }
 
-button {
+button,
+input[type=submit] {
   -webkit-apperance: none;
   cursor: pointer;
   font: inherit;
