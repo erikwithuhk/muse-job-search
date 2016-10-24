@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { hashHistory, withRouter } from 'react-router';
-import CategoryFilter from './filters/CategoryFilter.jsx';
+import FilterCheckboxes from './filters/FilterCheckboxes.jsx';
 
 class Filters extends Component {
   constructor(props) {
@@ -12,16 +12,45 @@ class Filters extends Component {
   }
   applyFilters(e) {
     e.preventDefault();
-    const input = document.querySelector('input');
-    this.setState({ filter: input.value });
+    const filters = [];
+    const formData = new FormData(e.target);
+    for (const pair of formData.entries()) {
+      const filter = {};
+      filter[pair[1]] = pair[0];
+      filters.push(filter);
+    }
+    console.log(filters);
     // hashHistory.push('/');
   }
   render() {
+    const categories = [
+      'Account Management',
+      'Business & Strategy',
+      'Creative & Design',
+      'Customer Service',
+      'Data Science',
+      'Editorial',
+      'Education',
+      'Engineering',
+      'Finance',
+      'Fundraising & Development',
+      'Healthcare & Medicine',
+      'HR & Recruiting',
+      'Legal',
+      'Marketing & PR',
+      'Operations',
+      'Project & Product Management',
+      'Retail',
+      'Sales',
+      'Social Media & Community',
+    ];
     return (
       <div className="filter-container">
+        <h2 className="page-title">Filter Jobs</h2>
         <form className="filter-form" onSubmit={this.applyFilters}>
           <div className="filter-form-container">
-            <CategoryFilter />
+            <h3 className="filter-subhead">By category:</h3>
+            <FilterCheckboxes items={categories} type="category" />
           </div>
           <input
             className="bottom-button bottom-button--fixed"

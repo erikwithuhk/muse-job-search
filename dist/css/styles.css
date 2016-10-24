@@ -198,26 +198,40 @@ input[type=submit] {
 6. Filters
 =======================*/
 
+.filter-container .page-title {
+  margin: 1rem;
+}
+
+.filter-subhead {
+  margin: 1em 0 0.5em;
+}
+
 .filter-form-container {
   margin: 1rem;
+  padding-bottom: 4.5rem;
 }
 
 .checkbox-container {
   display: inline-block;
+  width: 100%;
 }
 
 .filter-form input[type=checkbox] {
   -webkit-appearance: none;
+  display: none;
   margin-right: 0.5em;
 }
 
-.filter-form input[type=checkbox] + label {
+.filter-form input[type=checkbox] + label,
+.filter-form input[type=checkbox] + label:active,
+.filter-form input[type=checkbox] + label:focus {
   border: 2px solid #53b6d0;
   color: #53b6d0;
   cursor: pointer;
   display: inline-block;
-  margin: 0.25em;
+  margin: 0.25em 0;
   padding: 0.25em 0.5em;
+  width: 100%;
 }
 
 .filter-form input[type=checkbox] + label:hover,

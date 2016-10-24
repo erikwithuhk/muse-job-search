@@ -10,8 +10,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      filters: {},
       jobs: ['Loading'],
+      queries: '',
       page: 1,
       totalResults: 0,
     };
@@ -22,7 +22,7 @@ class App extends Component {
   }
   getJobs() {
     this.setState({ jobs: ['Loading'] });
-    request.get(`/api/v1/jobs?page=${this.state.page}`)
+    request.get(`/api/v1/jobs?page=${this.state.page}${this.state.queries}`)
            .then((response) => {
              this.setState({ jobs: response.body.results, totalResults: response.body.total });
            })
@@ -32,9 +32,6 @@ class App extends Component {
     const nextPage = this.state.page + 1;
     this.setState({ page: nextPage });
     this.getJobs();
-  }
-  applyFilters() {
-
   }
   render() {
     const childrenWithProps = React.cloneElement(this.props.children, {
