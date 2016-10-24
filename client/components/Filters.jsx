@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { hashHistory, withRouter } from 'react-router';
 import FilterCheckboxes from './filters/FilterCheckboxes.jsx';
 
+const propTypes = {
+  setFilters: React.PropTypes.func,
+};
+
 class Filters extends Component {
   constructor(props) {
     super(props);
@@ -19,7 +23,7 @@ class Filters extends Component {
       filter[pair[1]] = pair[0];
       filters.push(filter);
     }
-    console.log(filters);
+    this.props.setFilters(filters);
     // hashHistory.push('/');
   }
   render() {
@@ -62,5 +66,7 @@ class Filters extends Component {
     );
   }
 }
+
+Filters.propTypes = propTypes;
 
 export default withRouter(Filters);

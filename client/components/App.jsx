@@ -11,18 +11,19 @@ class App extends Component {
     super();
     this.state = {
       jobs: ['Loading'],
-      queries: '',
+      queryString: '',
       page: 1,
       totalResults: 0,
     };
     this.loadNextPage = this.loadNextPage.bind(this);
+    this.generateQueryString = this.generateQueryString.bind(this);
   }
   componentDidMount() {
     this.getJobs();
   }
   getJobs() {
     this.setState({ jobs: ['Loading'] });
-    request.get(`/api/v1/jobs?page=${this.state.page}${this.state.queries}`)
+    request.get(`/api/v1/jobs?page=${this.state.page}${this.state.queryString}`)
            .then((response) => {
              this.setState({ jobs: response.body.results, totalResults: response.body.total });
            })
@@ -33,10 +34,22 @@ class App extends Component {
     this.setState({ page: nextPage });
     this.getJobs();
   }
+  generateQueryString(filters) {
+    const queries = filters.map((filter) => {
+      const strings = Object.keys(filter).map((key) => {
+        const encodedValue = encodeURIComponent(filter[key]);
+        return `&${key}=${encodedValue}`;
+      });
+      return strings.join('');
+    });
+    const queryString = queries.join('');
+    this.setState({ queryString });
+  }
   render() {
     const childrenWithProps = React.cloneElement(this.props.children, {
       jobs: this.state.jobs,
       loadNextPage: this.loadNextPage,
+      setFilters: this.generateQueryString,
       totalResults: this.state.totalResults,
     });
     return (
