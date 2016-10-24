@@ -1,4 +1,4 @@
-const Job = require('../models/Job.js');
+const Job = require('../models/Job');
 
 class JobsController {
   static index(req, res) {
