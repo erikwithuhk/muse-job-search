@@ -81,6 +81,17 @@ button {
 
 .secondary {
   color: #ccc;
+  margin: 0.25em 0;
+}
+
+.secondary div {
+  display: inline-block;
+}
+
+.secondary .left {
+  margin-right: 1em;
+  text-align: center;
+  width: 1.5em;
 }
 
 .company {
@@ -207,21 +218,6 @@ button {
   padding-bottom: 1rem;
 }
 
-.secondary {
-  color: #ccc;
-  margin: 0.25em 0;
-}
-
-.secondary div {
-  display: inline-block;
-}
-
-.secondary .left {
-  margin-right: 1em;
-  text-align: center;
-  width: 1.5em;
-}
-
 .job-description {
   padding: 0 1rem;
 }
@@ -237,6 +233,10 @@ button {
 .apply-button {
   position: fixed;
   bottom: 0;
+}
+
+.apply-button .external-link {
+  margin-left: 0.5em;
 }
 
 

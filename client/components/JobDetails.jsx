@@ -52,14 +52,16 @@ class JobDetails extends Component {
     if (this.state.job.category) {
       categoryNode = (
         <div className="location secondary">
-        <div className="left"><Icon name="tags" /></div>
-        <div className="right">{this.state.job.category}</div>
+          <div className="left"><Icon name="tags" /></div>
+          <div className="right">{this.state.job.category}</div>
         </div>
       );
     }
     return (
       <div className="job-details-container">
-        <Link to="/" className="back-link" ><Icon name="chevron-left" className="back-arrow" />Back to Browse Jobs</Link>
+        <Link to="/" className="back-link" ><Icon name="chevron-left" className="back-arrow" />
+          Back to Browse Jobs
+        </Link>
         <div className="job-details-header">
           <h4 className="company">{this.state.job.company}</h4>
           <a className="title" href={this.state.job.museLink}>{this.state.job.title}</a>
@@ -69,7 +71,7 @@ class JobDetails extends Component {
         </div>
         <div className="job-description" />
         <a className="bottom-button apply-button" href={this.state.job.museLink}>
-          Read More and Apply
+          Read More and Apply <Icon name="external-link" className="external-link" />
         </a>
       </div>
     );
