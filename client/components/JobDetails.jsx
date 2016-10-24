@@ -31,9 +31,14 @@ class JobDetails extends Component {
     this.fillJobDescription();
     return (
       <div className="job-details-container">
-        <Link to="/" >Back to Browse Jobs</Link>
-        <h2>{this.state.job.title}</h2>
-        <p>{this.state.job.company}</p>
+        <Link to="/" className="back-link" >Back to Browse Jobs</Link>
+        <div className="job-details-header">
+          <p className="company">{this.state.job.company}</p>
+          <a className="title" href={this.state.job.museLink}>{this.state.job.title}</a>
+          <p className="location secondary">{this.state.job.locations}</p>
+          <p className="level secondary">{this.state.job.levels}</p>
+          <p className="category secondary">{this.state.job.category}</p>
+        </div>
         <div className="job-description" />
       </div>
     );

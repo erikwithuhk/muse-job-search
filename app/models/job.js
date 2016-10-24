@@ -14,15 +14,28 @@ class Job {
                   .then(response => new Job(response))
                   .catch(err => err);
   }
-  static getLocations(locations) {
-    return locations.map(location => location.name).join(', ');
+  static getStringFromArray(array) {
+    return array.map(item => item.name).join(', ');
   }
-  constructor({ id, name, company, contents, landing_page, locations, publication_date, short_name }) {
+  constructor({
+    id,
+    name,
+    categories,
+    company,
+    contents,
+    landing_page,
+    levels,
+    locations,
+    publication_date,
+    short_name,
+  }) {
     this.id = id;
     this.title = name;
+    this.category = Job.getStringFromArray(categories);
     this.company = company.name;
     this.description = contents;
-    this.locations = Job.getLocations(locations);
+    this.levels = Job.getStringFromArray(levels);
+    this.locations = Job.getStringFromArray(locations);
     this.museLink = landing_page;
     this.postedDate = Date.parse(publication_date);
     this.shortName = short_name;

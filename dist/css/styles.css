@@ -181,16 +181,49 @@ button {
 7. Job Details
 =======================*/
 
-.job-details-container {
-  font-size: 0.875rem;
-  padding: 1rem;
+.back-link {
+  background-color: #53b6d0;
+  color: #fff;
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
 }
 
-.job-details-container p {
+.job-details-container {
+  font-size: 0.875rem;
+}
+
+.job-details-header {
+  padding: 1.5rem 1rem;
+}
+
+.job-details-container .company {
+  text-transform: uppercase;
+}
+
+.job-details-container .title {
+  color: #53b6d0;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.secondary {
+  color: #ccc;
+}
+
+.job-details-container .location {
+  margin-top: 1rem;
+}
+
+.job-description {
+  padding: 0 1rem;
+}
+
+.job-description p {
   margin-top: 1em;
 }
 
-.job-details-container ul li {
+.job-description ul li {
   margin: 0.5rem 2rem;
 }
 
