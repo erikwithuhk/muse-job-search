@@ -24,7 +24,7 @@ class Filters extends Component {
       filters.push(filter);
     }
     this.props.setFilters(filters);
-    // hashHistory.push('/');
+    hashHistory.push('/');
   }
   render() {
     const categories = [
