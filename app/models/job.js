@@ -23,10 +23,10 @@ class Job {
     categories,
     company,
     contents,
-    landing_page,
     levels,
     locations,
     publication_date,
+    refs,
     short_name,
   }) {
     this.id = id;
@@ -36,7 +36,7 @@ class Job {
     this.description = contents;
     this.levels = Job.getStringFromArray(levels);
     this.locations = Job.getStringFromArray(locations);
-    this.museLink = landing_page;
+    this.museLink = refs.landing_page;
     this.postedDate = Date.parse(publication_date);
     this.shortName = short_name;
   }

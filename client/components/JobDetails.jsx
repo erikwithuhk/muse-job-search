@@ -30,6 +30,17 @@ class JobDetails extends Component {
   }
   render() {
     this.fillJobDescription();
+    let titleNode;
+    if (this.state.job.title) {
+      titleNode = (
+        <a
+          className="title"
+          href={this.state.job.museLink}
+        >
+          {this.state.job.title} <Icon name="external-link" className="external-link" />
+        </a>
+      );
+    }
     let locationNode;
     if (this.state.job.locations) {
       locationNode = (
@@ -64,13 +75,18 @@ class JobDetails extends Component {
         </Link>
         <div className="job-details-header">
           <h4 className="company">{this.state.job.company}</h4>
-          <a className="title" href={this.state.job.museLink}>{this.state.job.title}</a>
+          {titleNode}
           {locationNode}
           {levelNode}
           {categoryNode}
         </div>
         <div className="job-description" />
-        <a className="bottom-button apply-button" href={this.state.job.museLink}>
+        <a
+          className="bottom-button apply-button"
+          href={this.state.job.museLink}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           Read More and Apply <Icon name="external-link" className="external-link" />
         </a>
       </div>

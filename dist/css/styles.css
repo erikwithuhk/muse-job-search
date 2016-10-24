@@ -107,6 +107,7 @@ button {
   font-size: 1.25em;
   font-weight: bold;
   margin-bottom: 1rem;
+  text-decoration: none;
 }
 
 
@@ -218,6 +219,10 @@ button {
   border-bottom: 2px solid #eee;
   margin: 1.5rem 1rem;
   padding-bottom: 1rem;
+}
+
+.job-details-container .title .external-link {
+  margin-left: 0.25em;
 }
 
 .job-description {
