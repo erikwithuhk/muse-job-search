@@ -4,8 +4,8 @@ class Job {
   static all(queries) {
     return MuseAPI.all(queries)
                   .then((response) => {
-                    const jobs = response.results;
-                    return jobs.map(jobData => new Job(jobData));
+                    const jobs = response.results.map(jobData => new Job(jobData));
+                    return { results: jobs, total: response.total };
                   })
                   .catch(err => err);
   }
