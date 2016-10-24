@@ -9,7 +9,7 @@ class FilterCheckboxes extends Component {
   render() {
     const checkboxes = this.props.items.map((item, idx) => (
       <div className={`checkbox-container ${item}-checkbox`} key={idx} >
-        <input type="checkbox" id={item} name={item} value={this.props.type} />
+        <input type="checkbox" id={item} name={this.props.type} value={item} />
         <label htmlFor={item}>{item}</label>
       </div>
     ));

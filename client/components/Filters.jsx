@@ -22,7 +22,7 @@ class Filters extends Component {
     const formData = new FormData(e.target);
     for (const pair of formData.entries()) {
       const filter = {};
-      filter[pair[1]] = pair[0];
+      filter[pair[0]] = pair[1];
       filters.push(filter);
     }
     this.props.setFilters(filters);
@@ -34,15 +34,23 @@ class Filters extends Component {
         {locations.map((location, idx) => (<option key={idx} value={location} />))}
       </datalist>
     );
+    const levels = [
+      'Internship',
+      'Entry Level',
+      'Mid Level',
+      'Senior Level',
+    ];
     return (
       <div className="filter-container">
         <h2 className="page-title">Filter Jobs</h2>
         <form className="filter-form" onSubmit={this.applyFilters}>
           <div className="filter-form-container">
+            <h3 className="filter-subhead">By location:</h3>
+            <input type="text" name="location" list="locations" />
+            <h3 className="filter-subhead">By level:</h3>
+            <FilterCheckboxes items={levels} type="level" />
             <h3 className="filter-subhead">By category:</h3>
             <FilterCheckboxes items={categories} type="category" />
-            <h3 className="filter-subhead">By location:</h3>
-            <input type="text" list="locations" />
           </div>
           {locationsDatalist}
           <input

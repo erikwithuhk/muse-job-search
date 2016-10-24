@@ -40,7 +40,10 @@ class App extends Component {
     const queries = filters.map((filter) => {
       const strings = Object.keys(filter).map((key) => {
         const encodedValue = encodeURIComponent(filter[key]);
-        return `&${key}=${encodedValue}`;
+        if (encodedValue !== '') {
+          return `&${key}=${encodedValue}`;
+        }
+        return '';
       });
       return strings.join('');
     });
