@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import { Icon } from 'react-fa';
 import Job from './Job.jsx';
-import FilterBar from './filter/FilterBar.jsx';
 
 const propTypes = {
   jobs: React.PropTypes.array,
@@ -48,7 +48,7 @@ class JobList extends Component {
           <h2 className="page-title">Browse Jobs</h2>
           <h3 className="results-count">{this.props.totalResults} jobs found</h3>
         </div>
-        <FilterBar />
+        <Link to="/filter" className="filter-link"><Icon name="sliders" /> Filter</Link>
         {results}
         {loadMoreButton}
       </ul>

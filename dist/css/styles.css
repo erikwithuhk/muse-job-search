@@ -6,7 +6,7 @@
 3. Global Styles
 4. Top Nav
 5. Job List
-6. Filter Bar
+6. Filters
 7. Job Details
 #. Media Queries
 
@@ -59,6 +59,7 @@ body {
 
 button {
   -webkit-apperance: none;
+  cursor: pointer;
   font: inherit;
 }
 
@@ -132,7 +133,6 @@ button {
 
 .job-list {
   background-color: #eee;
-  /* 100% - header height */
   min-height: calc(100% - 3.1875rem);
   list-style-type: none;
   position: relative;
@@ -153,6 +153,15 @@ button {
 
 .results-count {
   font-weight: normal;
+}
+
+.filter-link {
+  background-color: #53b6d0;
+  color: #fff;
+  display: block;
+  padding: 0.5rem 0;
+  text-align: center;
+  text-decoration: none;
 }
 
 .job-list-item a {
@@ -179,15 +188,8 @@ button {
 
 
 /*=======================
-6. Filter Bar
+6. Filters
 =======================*/
-
-.filter-bar_header {
-  background-color: #53b6d0;
-  color: #fff;
-  padding: 0.5rem 0;
-  text-align: center;
-}
 
 
 
