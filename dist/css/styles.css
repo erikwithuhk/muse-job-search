@@ -192,6 +192,10 @@ button {
   text-decoration: none;
 }
 
+.back-arrow {
+  margin-right: 0.75em;
+}
+
 .job-details-container {
   font-size: 0.875rem;
   padding-bottom: 4.5rem;
@@ -202,8 +206,20 @@ button {
   margin: 1.5rem 1rem;
   padding-bottom: 1rem;
 }
+
 .secondary {
   color: #ccc;
+  margin: 0.25em 0;
+}
+
+.secondary div {
+  display: inline-block;
+}
+
+.secondary .left {
+  margin-right: 1em;
+  text-align: center;
+  width: 1.5em;
 }
 
 .job-description {

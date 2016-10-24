@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { Icon } from 'react-fa';
 
 const propTypes = {
   id: React.PropTypes.number,
@@ -53,7 +54,7 @@ class Job extends Component {
           <h4 className="company">{this.props.company}</h4>
           <h3 className="title">{this.props.title}</h3>
           <p className="location">{this.props.location}</p>
-          <p className="date-posted secondary">Posted {daysAgoText}</p>
+          <p className="date-posted secondary"><Icon name="calendar" /> Posted {daysAgoText}</p>
         </Link>
       </li>
     );

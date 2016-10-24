@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import request from 'superagent';
+import { Icon } from 'react-fa';
 
 const propTypes = {
   params: React.PropTypes.object,
@@ -29,15 +30,42 @@ class JobDetails extends Component {
   }
   render() {
     this.fillJobDescription();
+    let locationNode;
+    if (this.state.job.locations) {
+      locationNode = (
+        <div className="location secondary">
+          <div className="left"><Icon name="map-marker" /></div>
+          <div className="right">{this.state.job.locations}</div>
+        </div>
+      );
+    }
+    let levelNode;
+    if (this.state.job.levels) {
+      levelNode = (
+        <div className="location secondary">
+          <div className="left"><Icon name="bar-chart" /></div>
+          <div className="right">{this.state.job.levels}</div>
+        </div>
+      );
+    }
+    let categoryNode;
+    if (this.state.job.category) {
+      categoryNode = (
+        <div className="location secondary">
+        <div className="left"><Icon name="tags" /></div>
+        <div className="right">{this.state.job.category}</div>
+        </div>
+      );
+    }
     return (
       <div className="job-details-container">
-        <Link to="/" className="back-link" >Back to Browse Jobs</Link>
+        <Link to="/" className="back-link" ><Icon name="chevron-left" className="back-arrow" />Back to Browse Jobs</Link>
         <div className="job-details-header">
           <h4 className="company">{this.state.job.company}</h4>
           <a className="title" href={this.state.job.museLink}>{this.state.job.title}</a>
-          <p className="location secondary">{this.state.job.locations}</p>
-          <p className="level secondary">{this.state.job.levels}</p>
-          <p className="category secondary">{this.state.job.category}</p>
+          {locationNode}
+          {levelNode}
+          {categoryNode}
         </div>
         <div className="job-description" />
         <a className="bottom-button apply-button" href={this.state.job.museLink}>
