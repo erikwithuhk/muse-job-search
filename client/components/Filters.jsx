@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { hashHistory, withRouter } from 'react-router';
-import CompanyFilter from './filters/CompanyFilter.jsx';
+import CategoryFilter from './filters/CategoryFilter.jsx';
 
 class Filters extends Component {
   constructor(props) {
@@ -20,8 +20,14 @@ class Filters extends Component {
     return (
       <div className="filter-container">
         <form className="filter-form" onSubmit={this.applyFilters}>
-          <CompanyFilter />
-          <input className="bottom-button" type="submit" value="Apply Filters" />
+          <div className="filter-form-container">
+            <CategoryFilter />
+          </div>
+          <input
+            className="bottom-button bottom-button--fixed"
+            type="submit"
+            value="Apply Filters"
+          />
         </form>
       </div>
     );

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const propTypes = {};
 
-class CompanyFilter extends Component {
+class CategoryFilter extends Component {
   render() {
     const categories = [
       'Account Management',
@@ -26,11 +26,9 @@ class CompanyFilter extends Component {
       'Social Media & Community',
     ];
     const categoryCheckboxes = categories.map((category, idx) => (
-      <div className={`${category}-checkbox`} key={idx} >
-        <label>
-          <input type="checkbox" name={category} value={category} />
-          {category}
-        </label>
+      <div className={`checkbox-container ${category}-checkbox`} key={idx} >
+        <input type="checkbox" id={category} name={category} value={category} />
+        <label htmlFor={category}>{category}</label>
       </div>
     ));
     return (
@@ -41,6 +39,6 @@ class CompanyFilter extends Component {
   }
 }
 
-CompanyFilter.propTypes = propTypes;
+CategoryFilter.propTypes = propTypes;
 
-export default CompanyFilter;
+export default CategoryFilter;

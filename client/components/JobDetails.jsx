@@ -82,7 +82,7 @@ class JobDetails extends Component {
         </div>
         <div className="job-description" />
         <a
-          className="bottom-button apply-button"
+          className="bottom-button bottom-button--fixed apply-button"
           href={this.state.job.museLink}
           rel="noopener noreferrer"
           target="_blank"

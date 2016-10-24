@@ -77,6 +77,11 @@ input[type=submit] {
   width: 100%;
 }
 
+.bottom-button--fixed {
+  position: fixed;
+  bottom: 0;
+}
+
 .blue-text {
   color: #53b6d0;
 }
@@ -193,6 +198,34 @@ input[type=submit] {
 6. Filters
 =======================*/
 
+.filter-form-container {
+  margin: 1rem;
+}
+
+.checkbox-container {
+  display: inline-block;
+}
+
+.filter-form input[type=checkbox] {
+  -webkit-appearance: none;
+  margin-right: 0.5em;
+}
+
+.filter-form input[type=checkbox] + label {
+  border: 2px solid #53b6d0;
+  color: #53b6d0;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0.25em;
+  padding: 0.25em 0.5em;
+}
+
+.filter-form input[type=checkbox] + label:hover,
+  .filter-form input[type=checkbox]:checked + label {
+  background-color: #53b6d0;
+  color: #fff;
+}
+
 
 
 /*=======================
@@ -236,11 +269,6 @@ input[type=submit] {
 
 .job-description ul li {
   margin: 0.5rem 2rem;
-}
-
-.apply-button {
-  position: fixed;
-  bottom: 0;
 }
 
 .apply-button .external-link {
