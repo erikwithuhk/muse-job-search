@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { hashHistory, withRouter } from 'react-router';
 import FilterCheckboxes from './filters/FilterCheckboxes.jsx';
+import categories from '../lib/categories.js';
 import locations from '../lib/locations.js';
 
 const propTypes = {
@@ -28,27 +29,6 @@ class Filters extends Component {
     hashHistory.push('/');
   }
   render() {
-    const categories = [
-      'Account Management',
-      'Business & Strategy',
-      'Creative & Design',
-      'Customer Service',
-      'Data Science',
-      'Editorial',
-      'Education',
-      'Engineering',
-      'Finance',
-      'Fundraising & Development',
-      'Healthcare & Medicine',
-      'HR & Recruiting',
-      'Legal',
-      'Marketing & PR',
-      'Operations',
-      'Project & Product Management',
-      'Retail',
-      'Sales',
-      'Social Media & Community',
-    ];
     const locationsDatalist = (
       <datalist id="locations">
         {locations.map((location, idx) => (<option key={idx} value={location} />))}
